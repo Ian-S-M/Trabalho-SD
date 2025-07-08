@@ -88,6 +88,8 @@ uvicorn api_gateway.main:app --reload
 
 ```
 
+---
+
 ## 📚 Referências
 
 - BRASIL. Lei nº 13.146, de 6 de julho de 2015. Estatuto da Pessoa com Deficiência.
@@ -97,6 +99,8 @@ uvicorn api_gateway.main:app --reload
 - AWS Documentation – Amazon Polly
 
 - IBGE. Censo Demográfico 2022 – Características da população com deficiência auditiva.
+
+---
 
 ## 👥 Equipe
 
