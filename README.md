@@ -59,14 +59,15 @@ Nosso sistema propõe um modelo que permite:
 ```bash
 
 /acessibilidade-julgamento-ia/
-├── api_gateway/
-├── transcriber/
-├── reader/
-├── docs/
-│ ├── arquitetura_inicial.png
-│ └── arquitetura_final.png
-├── README.md
-└── requirements.txt
+  |
+  ├── api_gateway/
+  ├── transcriber/
+  ├── reader/
+  ├── docs/
+  │      ├── arquitetura_inicial.png
+  │      └── arquitetura_final.png
+  ├── README.md
+  └── requirements.txt
 
 ```
 
