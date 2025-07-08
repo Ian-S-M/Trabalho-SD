@@ -29,10 +29,15 @@ Nosso sistema propõe um modelo que permite:
 ## 🔗 Tecnologias Utilizadas
 
 - **FastAPI** para APIs dos microserviços
+ 
 - **AWS Transcribe** para transcrição automática
+  
 - **AWS Polly** para leitura de textos com voz natural
+  
 - **Python (3.10+)**
+  
 - **HTTP REST APIs** para comunicação entre agentes
+  
 - **GitHub** como controle de versão e rastreio de tarefas
 
 ---
@@ -52,6 +57,7 @@ Nosso sistema propõe um modelo que permite:
 ## 📎 Estrutura de Diretórios
 
 ```bash
+
 /acessibilidade-julgamento-ia/
 ├── api_gateway/
 ├── transcriber/
@@ -61,6 +67,7 @@ Nosso sistema propõe um modelo que permite:
 │ └── arquitetura_final.png
 ├── README.md
 └── requirements.txt
+
 ```
 
 ---
@@ -70,9 +77,11 @@ Nosso sistema propõe um modelo que permite:
 ```bash
 
 # Instale as dependências
+
 pip install -r requirements.txt
 
 # Inicie os serviços separadamente
+
 uvicorn transcriber.transcriber_service:app --reload
 uvicorn reader.reader_service:app --reload
 uvicorn api_gateway.main:app --reload
