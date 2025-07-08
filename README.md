@@ -60,8 +60,11 @@ Nosso sistema propõe um modelo que permite:
 
 /acessibilidade-julgamento-ia/
   ├── api_gateway/
+  │     └── main.py
   ├── transcriber/
+  │     └── transcriber_service.py
   ├── reader/
+  │     └── reader_service.py
   ├── docs/
   │     ├── arquitetura_inicial.png
   │     └── arquitetura_final.png
