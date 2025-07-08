@@ -8,11 +8,16 @@ import time
 app = FastAPI()
 
 AWS_REGION = "us-east-1"
-BUCKET_NAME = "nome-do-seu-bucket"  # Substituir pelo bucket real
+BUCKET_NAME = "bucketsdprojeto"  # Substituir pelo bucket real
 
 # Clientes AWS
 s3 = boto3.client("s3", region_name=AWS_REGION)
 transcribe = boto3.client("transcribe", region_name=AWS_REGION)
+
+def get_extension(filename, default="mp3"):
+    if filename and "." in filename:
+        return filename.rsplit(".", 1)[-1].lower()
+    return default
 
 @app.post("/transcribe")
 async def transcribe_audio(file: UploadFile = File(...)):
@@ -31,13 +36,16 @@ async def transcribe_audio(file: UploadFile = File(...)):
     except Exception as e:
         return JSONResponse(status_code=500, content={"erro": f"Erro no upload para S3: {str(e)}"})
 
+    # Extrai a extensão de forma segura
+    media_format = get_extension(file.filename)
+
     # Inicia o job de transcrição
     media_uri = f"s3://{BUCKET_NAME}/{audio_filename}"
     try:
         transcribe.start_transcription_job(
             TranscriptionJobName=job_name,
             Media={"MediaFileUri": media_uri},
-            MediaFormat=file.filename.split(".")[-1],
+            MediaFormat=media_format,
             LanguageCode="pt-BR",
             OutputBucketName=BUCKET_NAME
         )
