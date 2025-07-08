@@ -8,6 +8,7 @@ import os
 app = FastAPI()
 
 # Inicializa o cliente do Polly
+
 polly = boto3.client('polly', region_name='us-east-2')
 
 @app.post("/speak")
