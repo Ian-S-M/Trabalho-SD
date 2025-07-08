@@ -95,6 +95,17 @@ uvicorn reader.reader_service:app --reload
 uvicorn api_gateway.main:app --reload
 
 ```
+---
+
+## 👥 Equipe
+
+- Ian Soares Martins
+  
+- Gabriel Andrade Carvalho
+
+- Alexandre Moraes Pereira Carvalhaes Filho
+
+- Guilherme Resende Mendes da Silva
 
 ---
 
@@ -108,14 +119,3 @@ uvicorn api_gateway.main:app --reload
 
 - IBGE. Censo Demográfico 2022 – Características da população com deficiência auditiva.
 
----
-
-## 👥 Equipe
-
-- Ian Soares Martins
-  
-- Gabriel Andrade Carvalho
-
-- Alexandre Moraes Pereira Carvalhaes Filho
-
-- Guilherme Resende Mendes da Silva
