@@ -5,9 +5,9 @@
 Este projeto tem como objetivo desenvolver um sistema distribuído com múltiplos agentes de inteligência artificial, voltado para auxiliar pessoas com deficiência auditiva em julgamentos, por meio de:
 
 - Transcrição automática de falas (áudios) para texto com uso da AWS Transcribe;
-- 
+  
 - Leitura de textos gerados por IA com AWS Polly, facilitando o acompanhamento auditivo do conteúdo;
-- 
+  
 - Comunicação entre agentes via API, seguindo o modelo de microserviços.
 
 ---
@@ -19,9 +19,9 @@ Pessoas com deficiência auditiva frequentemente enfrentam obstáculos em ambien
 Nosso sistema propõe um modelo que permite:
 
 - Transcrição em tempo real de sessões;
-- 
+  
 - Leitura do conteúdo para acompanhantes, advogados ou intérpretes;
-- 
+  
 - Registro automático das falas em formato de texto e áudio.
 
 ---
@@ -40,9 +40,9 @@ Nosso sistema propõe um modelo que permite:
 ## 🧠 Arquitetura do Sistema
 
 - `transcriber_service`: recebe um áudio, envia para o AWS Transcribe, retorna o texto.
-- 
+  
 - `reader_service`: recebe o texto e retorna o áudio falado com AWS Polly.
-- 
+  
 - `api_gateway`: faz a orquestração entre os serviços e expõe a API principal para o usuário.
 
 (Diagramas estão na pasta `docs/`)
