@@ -50,7 +50,7 @@ Nosso sistema propõe um modelo que permite:
   
 - `api_gateway`: faz a orquestração entre os serviços e expõe a API principal para o usuário.
 
-(Diagramas estão na pasta `docs/`)
+(Diagramas estão na pasta `assets/`)
 
 ---
 
